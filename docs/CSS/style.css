@@ -1,0 +1,112 @@
+body {
+  background-color: #fdf9f9;
+  color: #3f2b4a;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family:"bahnschrift-condensed", sans-serif;
+}
+
+.bg-light-gray {
+  background-color: #f3effa;
+}
+
+.navbar {
+  background-color: #f3effa !important;
+}
+
+.navbar .nav-link {
+  color: #a98fc7 !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #3f2b4a !important;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1593032465171-f9484b9b2c52') center/cover no-repeat;
+  color: #3f2b4a;
+  padding: 100px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.card.product-card {
+  border: 1px solid #e5dff2;
+  transition: transform 0.2s;
+}
+
+.card.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(167, 134, 223, 0.2);
+}
+
+.card-title {
+  color: #a98fc7;
+}
+
+.btn-dark {
+  background-color: #d7bce8;
+  border-color: #d7bce8;
+  color: #3f2b4a;
+}
+
+.btn-dark:hover {
+  background-color: #a98fc7;
+  border-color: #a98fc7;
+  color: #fff;
+}
+
+footer {
+  background-color: #2f1e36;
+  color: #f3effa;
+  padding: 30px 0;
+}
+
+footer a {
+  color: #f3effa;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .product-image {
+  transform: scale(1.1);
+}
+
+.info-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(243, 239, 250, 0.9);
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 0.9rem;
+  color: #3f2b4a;
+  z-index: 2;
+}
+
+.image-container:hover .info-hover {
+  opacity: 1;
+}
+
+/* Mejora visibilidad de flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(167, 134, 223, 0.5);
+  border-radius: 50%;
+}
