@@ -15,25 +15,96 @@
 
     <style>
       body {
-        background-color: #f8f9fa;
+        background-color: #fdf9f9;
+        color: #3f2b4a;
+        font-family: 'Poppins', sans-serif;
       }
+
       .bg-light-gray {
-        background-color: #f0f0f0;
+        background-color: #f3effa;
       }
+
+      .navbar {
+        background-color: #f3effa !important;
+      }
+
+      .navbar .nav-link {
+        color: #a98fc7 !important;
+        font-weight: 500;
+      }
+
+      .navbar .nav-link:hover {
+        color: #3f2b4a !important;
+      }
+
       .hero {
         background: url('https://images.unsplash.com/photo-1593032465171-f9484b9b2c52') center/cover no-repeat;
-        color: rgb(22, 19, 19);
+        color: #3f2b4a;
         padding: 100px 0;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
       }
-      .product-card img {
-        object-fit: cover;
-        height: 250px;
+
+      .card.product-card {
+        border: 1px solid #e5dff2;
+        transition: transform 0.2s;
       }
+
+      .card.product-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 15px rgba(167, 134, 223, 0.2);
+      }
+
+      .card-title {
+        color: #a98fc7;
+      }
+
+      .btn-dark {
+        background-color: #d7bce8;
+        border-color: #d7bce8;
+        color: #3f2b4a;
+      }
+
+      .btn-dark:hover {
+        background-color: #a98fc7;
+        border-color: #a98fc7;
+        color: #fff;
+      }
+
       footer {
-        background-color: #343a40;
-        color: white;
+        background-color: #2f1e36;
+        color: #f3effa;
         padding: 30px 0;
+      }
+
+      footer a {
+        color: #f3effa;
+        text-decoration: underline;
+      }
+
+      footer a:hover {
+        color: #ffffff;
+      }
+
+      .product-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .info-hover {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(243, 239, 250, 0.95);
+        color: #3f2b4a;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        font-size: 0.9rem;
+      }
+
+      .product-card:hover .info-hover {
+        opacity: 1;
       }
     </style>
   </head>
@@ -73,7 +144,7 @@
      <main>
       <section id="catalogo" class="py-5">
         <div class="container">
-          <h2 class="text-center mb-5">Nuevos Modelos</h2>
+          <h2 class="text-center mb-5">Nuestros Modelos</h2>
           <div class="row g-4 mb-5">
             <!-- Producto 1 -->
             <div class="col-md-4">
@@ -82,6 +153,9 @@
                 <div class="card-body">
                   <h5 class="card-title">Bolsa Bordada</h5>
                   <p class="card-text">$799 MXN</p>
+                  <div class="info-hover">
+                    <p class="mb-0"><strong>Descripción:</strong> Hecha a mano con materiales de calidad.</p>
+                  </div>
                   <a href="#" class="btn btn-dark w-100 add-to-cart" data-id="1" data-nombre="Bolsa Bordada" data-precio="799">Agregar al carrito</a>
                 </div>
               </div>
@@ -156,6 +230,7 @@
         <p class="small">Síguenos en
           <a href="#" class="text-white">Instagram</a>
         </p>
+        <p>Creada por Wild Shock Studio</p>
       </div>
     </footer>
 
