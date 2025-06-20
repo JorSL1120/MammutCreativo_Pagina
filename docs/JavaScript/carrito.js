@@ -1,15 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let carrito = [];
+document.addEventListener("DOMContentLoaded", function () { //Esto evita que haya errores al incio
+  let carrito = []; // Arreglo vacio que se ira actualizando
 
+  // Guarda el carrito en el navegador para que sea el mismo aunque cambies de pagina
   function guardarCarritoEnLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }
 
+  // Carga el carrito dependiendo la informacion que tenga el local storage
   function cargarCarritoDesdeLocalStorage() {
     const guardado = localStorage.getItem('carrito');
     carrito = guardado ? JSON.parse(guardado) : [];
   }
 
+  // Actualiza visualmente lo que esta en el carrito
   function actualizarCarrito() {
     const lista = document.getElementById('cart-items');
     const total = document.getElementById('cart-total');
@@ -17,10 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!lista || !total || !count) return; // Evita errores si la página no tiene estos elementos
 
-    lista.innerHTML = '';
-    let totalPrecio = 0;
-    let totalCantidad = 0;
+    lista.innerHTML = ''; // Limpia la lista
+    let totalPrecio = 0; // Declaramos variable para sumar el precio
+    let totalCantidad = 0; // Declaramos variable para sumar la cantidad
 
+    // Recorre el carrito producto por producto
     carrito.forEach(p => {
       totalPrecio += p.precio * p.cantidad;
       totalCantidad += p.cantidad;
@@ -30,10 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
       lista.appendChild(li);
     });
 
-    total.textContent = totalPrecio;
-    count.textContent = totalCantidad;
+    total.textContent = totalPrecio; // Muestra el total del precio
+    count.textContent = totalCantidad; // Muestra la cantidad total
   }
 
+  // Funcion para finalizar la compra en el cual se muestra el total y los productos
   function finalizarCompra() {
     if (carrito.length === 0) {
       alert('Tu carrito está vacío.');
@@ -49,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
     resumen += `\nTOTAL: $${total} MXN`;
 
     alert(resumen);
-    carrito = [];
+    carrito = []; // Limpia el arreglo del carrito
     guardarCarritoEnLocalStorage();
     actualizarCarrito();
 
-    const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
-    if (modal) modal.hide();
+    const modal = bootstrap.Modal.getInstance(document.getElementById('cartModal')); // Busca el modal del carrito
+    if (modal) modal.hide(); // Cierra el modal
   }
 
   // Hace accesible la función desde HTML
