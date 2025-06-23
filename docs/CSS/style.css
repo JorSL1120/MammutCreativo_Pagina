@@ -4,8 +4,22 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 h1 {
   font-family:"bahnschrift-condensed", sans-serif;
+}
+
+h5 {
+  color: #913dad !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.text-modelos {
+  color: #913dad !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 .bg-light-gray {
@@ -32,6 +46,17 @@ h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+.frase-inspiradora {
+  font-family: 'Segoe Script', 'Lucida Handwriting', cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #913dad;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
 .card.product-card {
   border: 1px solid #e5dff2;
   transition: transform 0.2s;
@@ -47,15 +72,15 @@ h1 {
 }
 
 .btn-dark {
-  background-color: #d7bce8;
-  border-color: #d7bce8;
-  color: #3f2b4a;
+  background-color: #d7bce8 !important;
+  border-color: #d7bce8 !important;
+  color: #3f2b4a !important;
 }
 
 .btn-dark:hover {
-  background-color: #a98fc7;
-  border-color: #a98fc7;
-  color: #fff;
+  background-color: #a98fc7 !important;
+  border-color: #a98fc7 !important;
+  color: #fff !important;
 }
 
 footer {
@@ -65,12 +90,13 @@ footer {
 }
 
 footer a {
-  color: #f3effa;
+  color: #decff7;
   text-decoration: underline;
 }
 
 footer a:hover {
-  color: #ffffff;
+  color: #f8e1ff;
+  text-decoration: underline;
 }
 
 .image-container {
